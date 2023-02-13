@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Header } from "./Header";
 export function RegisterForm(){
     const[name,setName] = useState("")
     const[email,setEmail]=useState("")
@@ -20,6 +20,8 @@ export function RegisterForm(){
     }
 
     return(
+        <html>
+        <Header></Header>
         <div className="">
             <h1 className="bg-danger text-light">Register Form</h1>
         <form onSubmit={handalSubmitform}>
@@ -40,5 +42,6 @@ export function RegisterForm(){
 
         </form>
         </div>
+        </html>
          )   
 }

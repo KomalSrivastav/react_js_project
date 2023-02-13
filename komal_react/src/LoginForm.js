@@ -1,6 +1,7 @@
+import {Header} from './Header';
 import { useState } from 'react';
-
 export function LoginForm(){
+
 
     // Set Data From Html Form 
 const [email, setEmail] = useState("");
@@ -21,7 +22,10 @@ event.preventDefault();
 }
 
   return(
+    <html>
+    <Header></Header>
 <form onSubmit={Login}>
+ 
     <h2>Login Form</h2>
     <form>
       <label>Email: 
@@ -30,13 +34,12 @@ event.preventDefault();
       <label>Password:
         <input type="password" onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
       </label>
-      
     </form>
     {errorsMsg}
 <button>Submit</button>
 <a href="LoginFOrm"></a>
-
 </form>
+</html>
     )
 }
 
